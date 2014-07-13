@@ -18,12 +18,12 @@ class CompactTreeSpace implements TreeSpace {
             CHILD_COUNT_OFF = 4,
             FIRST_CHILD_OFF = 5;
 
-    AbstractIntegers index;
+    IntegerStorage index;
     StringBuilder contents = new StringBuilder();
     StringBuilder names = new StringBuilder();
     List<Tree> foreign = new ArrayList<Tree>(0);
 
-    CompactTreeSpace(AbstractIntegers index) {
+    CompactTreeSpace(IntegerStorage index) {
         this.index = index;
     }
 
@@ -53,7 +53,7 @@ class CompactTreeSpace implements TreeSpace {
 
     private static boolean tradeTimeForSpace = false;
 
-    private static void record(CharSequence name, StringBuilder text, AbstractIntegers index) {
+    private static void record(CharSequence name, StringBuilder text, IntegerStorage index) {
         if (tradeTimeForSpace) {
             Matcher m = Pattern.compile(name.toString(), Pattern.LITERAL).matcher(text);
             if (m.find()) {

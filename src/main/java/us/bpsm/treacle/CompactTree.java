@@ -18,7 +18,7 @@ class CompactTree implements Tree {
 
     @Override
     public Iterator<Tree> iterator() {
-        final AbstractIntegers index = space.index;
+        final IntegerStorage index = space.index;
         final int n = index.get(id + CHILD_COUNT_OFF);
         final int beg = id + FIRST_CHILD_OFF;
         final int end = beg + n;
@@ -27,7 +27,7 @@ class CompactTree implements Tree {
 
     @Override
     public CharSequence name() {
-        final AbstractIntegers index = space.index;
+        final IntegerStorage index = space.index;
         return space.names.subSequence(
                 index.get(id + NAME_BEG_OFF),
                 index.get(id + NAME_END_OFF));
@@ -35,7 +35,7 @@ class CompactTree implements Tree {
 
     @Override
     public CharSequence content() {
-        final AbstractIntegers index = space.index;
+        final IntegerStorage index = space.index;
         return space.contents.subSequence(
                 index.get(id + CONT_BEG_OFF),
                 index.get(id + CONT_END_OFF));

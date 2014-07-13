@@ -3,9 +3,6 @@ package us.bpsm.treacle;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-/**
- *
- */
 public class CompactTreeIterator implements Iterator<Tree> {
     int i;
     final int end;
@@ -33,5 +30,10 @@ public class CompactTreeIterator implements Iterator<Tree> {
         } else {
             return space.foreign.get(Math.abs(id)-1);
         }
+    }
+
+    @Override
+    public void remove() {
+        throw new UnsupportedOperationException();
     }
 }

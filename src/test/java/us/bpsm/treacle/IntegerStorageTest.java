@@ -8,14 +8,11 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- *
- */
-public abstract class AbstractIntegersTest {
+public abstract class IntegerStorageTest {
 
-    AbstractIntegers ai;
+    IntegerStorage ai;
 
-    abstract AbstractIntegers newIntegers();
+    abstract IntegerStorage newIntegers();
 
     @Before
     public void initSpace() {

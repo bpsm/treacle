@@ -1,9 +1,7 @@
 package us.bpsm.treacle;
 
-/**
- *
- */
-public abstract class AbstractIntegers {
+abstract class IntegerStorage {
+
     abstract int get(int i);
 
     abstract void set(int i, int v);
@@ -12,7 +10,4 @@ public abstract class AbstractIntegers {
 
     abstract int size();
 
-    AbstractIntegers widen() {
-        return this;
-    }
 }

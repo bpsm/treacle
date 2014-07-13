@@ -3,10 +3,10 @@ package us.bpsm.treacle;
 /**
  *
  */
-public class IntegersTest extends AbstractIntegersTest {
+public class IntegersTest extends IntegerStorageTest {
 
     @Override
-    AbstractIntegers newIntegers() {
+    IntegerStorage newIntegers() {
         return new Integers();
     }
 }

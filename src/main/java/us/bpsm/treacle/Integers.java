@@ -2,7 +2,7 @@ package us.bpsm.treacle;
 
 import java.util.Arrays;
 
-class Integers extends AbstractIntegers {
+class Integers extends IntegerStorage {
     private static final int INITIAL_BLOCK_CAPACITY = 16;
     private static final int BLOCK_SIZE = 1024;
     int[][] blocks;

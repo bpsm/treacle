@@ -18,9 +18,8 @@ public class TreeTest {
 
     @Before
     public void initSpace() {
-        //space = new CompactTreeSpace(new BlockedIntegers());
-        //space = new CompactTreeSpace(new Integers());
-        space = new NaiveTreeSpace();
+        space = new CompactTreeSpace(new Integers());
+        //space = new NaiveTreeSpace();
     }
 
     Tree newTree(String name, String content, Tree ... children) {
